@@ -33,13 +33,14 @@
     }
 
     .main_card {
-      height: 90vh;
+      height: 85vh;
       width: 55vh;
       background-color: white;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
       align-self: center;
+      box-shadow: 2px 5px 30px -1px rgba(0,0,0,0.10);
     }
 
     #card_img {
@@ -50,22 +51,25 @@
       font-weight: 900;
       font-size: 20px;
       margin-top: 30px;
+      margin-bottom: 0;
     }
 
-    p {
+    .para {
       text-align:center;
       font-size: small;
       margin: 10px 30px;
+      color: #707486;
     }
 
     .sub_card {
       display: flex;
-      height: 15vh;
-      width: 85%;
+      height: 12vh;
+      width: 80%;
       background-color: #F8F9FE;
-      margin: 0px 30px;
+      margin: 10px 30px;
       align-items: center;
       border-radius: 10px;
+      font-size: small;
     }
 
     .m_icon {
@@ -76,16 +80,30 @@
 
     .ap {
       width: 50%;
+      padding-left: 10px;
     }
 
     .ap p{
-      text-align: left;
+      
+    }
+
+    #ann_plan {
+      font-weight: bold;
+    }
+
+    #price {
+      color: #929ABE;
     }
 
     .change {
-      width: 30%;
+      width: 25%;
       text-align: right;
       margin-right: 15px;
+      font-size: smaller;
+    }
+
+    .change a {
+      color: blue;
     }
 
     .change a:hover {
@@ -94,37 +112,50 @@
     }
 
     .pay_btn {
-      width: 85%;
+      width: 80%;
       height: 3em;
-      margin: 20px 30px;
+      margin: 20px 40px 0 30px;
       background-color: #382AE1;
       border-radius: 10px;
       text-align:center; 
       line-height: 3em;
       color: white;
-      box-shadow: 0px 8px 2px 18px .15px #382AE1;
+      box-shadow: 0px 5px 30px -1px rgba(0,0,0,0.30);
+      font-size: smaller;
+      font-weight: 500;
     }
 
     .pay_btn:hover {
       background-color: #766CF1;
       cursor: pointer;
+
     }
 
     .can_ord {
       height: 7vh;
       line-height: 7vh;
       text-align: center;
+      color: #898EA4;
+      font-size: smaller;
+      margin-top: 10px;
+      font-weight: 600;
+
     }
 
-    @media only screen and (max-width: 500px) {
+    .can_ord:hover {
+      color: black;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px) {
       body {
         background-color: #E0E8FF;
         background-image: none;
       }
 
       .main_card {
-        height: 70vh;
-        width: 80%;
+        height: 67vh;
+        width: 90%;
         background-color: white;
         border-radius: 10px;
         display: flex;
@@ -132,69 +163,17 @@
         align-self: center;
       }
 
-    #card_img {
-      border-radius: 10px 10px 0 0;
-    }
-
-    .os {
-      font-weight: 900;
-      font-size: 20px;
-      margin-top: 30px;
-    }
-
-    p {
+    .para {
       text-align:center;
       font-size: small;
-      margin: 10px 30px;
-    }
-
-    .sub_card {
-      display: flex;
-      height: 15vh;
-      width: 85%;
-      background-color: #F8F9FE;
-      margin: 0px 30px;
-      align-items: center;
-      border-radius: 10px;
-    }
-
-    .m_icon {
-      width: 20%;
-      height: 50px;
-      margin-left: 15px;
-    }
-
-    .ap {
-      width: 50%;
-    }
-
-    .ap p{
-      text-align: left;
-    }
-
-    .change {
-      width: 30%;
-      text-align: right;
-      margin-right: 15px;
-    }
-
-    .pay_btn {
-      width: 85%;
-      height: 3em;
       margin: 20px 30px;
-      background-color: #382AE1;
-      border-radius: 10px;
-      text-align:center; 
-      line-height: 3em;
-      color: white;
-      box-shadow: 0px 8px 2px 18px .15px #382AE1;
     }
 
     .can_ord {
-      height: 7vh;
-      line-height: 7vh;
-      text-align: center;
+      margin-top: 0px;
     }
+
+    
     }
   </style>
 </head>
@@ -206,7 +185,7 @@
    
   <center> <p class="os"> Order Summary</p> </center>
 
-  <p>You can now listen to millions of songs,
+  <p class="para">You can now listen to millions of songs,
         audiobooks, and podcasts on any 
            device anywhere you like!
   </p>
@@ -214,8 +193,8 @@
   <div class="sub_card">
     <div class="m_icon"><img src="images/icon-music.svg" alt=""></div>
     <div class="ap">
-      <p>Annual Plan
-      <br>$59.99/year</p>
+      <p><span id="ann_plan">Annual Plan</span>
+      <br><span id="price">$59.99/year</span></p>
     </div>
     <div class="change"><a href="#">Change</a></div>
   </div>
@@ -229,5 +208,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Aniket S. Narayane</a>.
   </div>
+  
 </body>
 </html>
